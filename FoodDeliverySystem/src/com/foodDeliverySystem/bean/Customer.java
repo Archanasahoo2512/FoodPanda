@@ -1,5 +1,5 @@
 package com.foodDeliverySystem.bean;
-
+ 
 public class Customer {
 	
 	private String name;

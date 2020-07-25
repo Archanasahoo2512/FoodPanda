@@ -111,7 +111,7 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
-
+ 
 </script>
 		<br> <br> <br> <br> <b><a
 			href="/FoodDeliverySystem/">Back</a></b>

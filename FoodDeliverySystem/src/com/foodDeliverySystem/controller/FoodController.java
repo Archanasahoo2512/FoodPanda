@@ -137,7 +137,7 @@ public class FoodController {
 		mv.addObject("TotalPrice", rest.getTotalPrice());
 		mv.addObject("MobileNumber", rest.getMobileNumber());
 		return mv;
-	}
+	} 
 	@RequestMapping(value="/orderFinalItems", method= RequestMethod.POST)
 	public ModelAndView orderItemList(@ModelAttribute("Resturant") Resturant rest, BindingResult result, HttpSession session){
 		

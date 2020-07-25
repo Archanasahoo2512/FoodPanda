@@ -20,7 +20,7 @@
 	<property name="prefix" value="/WEB-INF/view/"></property>
 	<property name="suffix" value=".jsp"></property>
 </bean>
-<bean id="customer" class="com.foodDeliverySystem.bean.Customer"/>
+<bean id="customer" class="com.foodDeliverySystem.bean.Customer"/> 
 <bean id="order" class="com.foodDeliverySystem.bean.Order"/>
 <bean id="resturant" class="com.foodDeliverySystem.bean.Resturant"/>
 

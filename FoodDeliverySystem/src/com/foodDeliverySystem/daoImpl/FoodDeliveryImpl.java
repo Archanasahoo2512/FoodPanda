@@ -11,7 +11,7 @@ import com.foodDeliverySystem.bean.Resturant;
 import com.foodDeliverySystem.dao.FoodDeliveryDao;
 import com.sun.org.apache.xpath.internal.axes.HasPositionalPredChecker;
 
-@Repository
+@Repository 
 public class FoodDeliveryImpl implements FoodDeliveryDao{
 	
 	public Resturant loadRestaurantList(Resturant rest){
