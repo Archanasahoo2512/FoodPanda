@@ -9,6 +9,8 @@ import javax.servlet.http.HttpSession;
 
 
 
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -26,12 +28,8 @@ import com.foodDeliverySystem.daoImpl.FoodDeliveryImpl;
 @Controller
 public class FoodController {
 	
-	/*@Autowired
-    private Customer cust;
-	
-	@Autowired
-    private Resturant rest;*/
 
+	
 	FoodDeliveryImpl foodImpl;
 	
 	@RequestMapping(value="/", method= RequestMethod.GET)
@@ -40,9 +38,14 @@ public class FoodController {
 		return mv;
 	}
 	
+	@RequestMapping(value="/index.html", method= RequestMethod.GET)
+	public ModelAndView loginIndex(){
+		ModelAndView mv=new ModelAndView("Login");
+		return mv;
+	}
+	
 	@RequestMapping(value="/loginSubmit", method = { RequestMethod.GET, RequestMethod.POST })
 	public ModelAndView loginSuccess(@ModelAttribute("Customer") Customer cust, BindingResult result, HttpSession session){
-		
 		ModelAndView mv=new ModelAndView();
 		if(result.hasErrors()){
 			 mv =new ModelAndView();
@@ -56,22 +59,7 @@ public class FoodController {
 		return mv;
 		}
 	}
-/*	@RequestMapping(value="/loginSubmit/{num}", method = { RequestMethod.GET, RequestMethod.POST })
-	public ModelAndView loginSuccess(@PathVariable("num") String num, @ModelAttribute("Customer") Customer cust, BindingResult result, HttpSession session){
-		
-		ModelAndView mv=new ModelAndView();
-		if(result.hasErrors()){
-			 mv =new ModelAndView();
-			 mv.setViewName("Login");
-			return mv;
-		}else{
-		System.out.println("mobile--"+num.substring(4).trim());
-		session.setAttribute("userMobile", cust.getMobileNumber());
-		 mv.setViewName("FoodDeliveryDashboard");
-		 mv.addObject("mobile", num.substring(4).trim());
-		return mv;
-		}
-	}*/
+
 	@RequestMapping(value="/orderFoodLocation", method= RequestMethod.GET)
 	public ModelAndView orderFoodLocation(HttpSession session){
 		String mb= (String) session.getAttribute("userMobile");

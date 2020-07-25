@@ -5,10 +5,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
 import com.foodDeliverySystem.bean.Resturant;
 import com.foodDeliverySystem.dao.FoodDeliveryDao;
 import com.sun.org.apache.xpath.internal.axes.HasPositionalPredChecker;
 
+@Repository
 public class FoodDeliveryImpl implements FoodDeliveryDao{
 	
 	public Resturant loadRestaurantList(Resturant rest){

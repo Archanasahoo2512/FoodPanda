@@ -2,8 +2,10 @@ package com.foodDeliverySystem.dao;
 
 import java.util.ArrayList;
 
-import com.foodDeliverySystem.bean.Resturant;
+import org.springframework.stereotype.Component;
 
+import com.foodDeliverySystem.bean.Resturant;
+@Component
 public interface FoodDeliveryDao {
 
 		public Resturant loadRestaurantList(Resturant rest);
