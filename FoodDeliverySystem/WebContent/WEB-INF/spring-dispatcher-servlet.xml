@@ -17,7 +17,7 @@
  <mvc:resources mapping = "/images/**" location = "/WEB-INF/images/" />
  
 <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-	<property name="prefix" value="/WEB-INF/"></property>
+	<property name="prefix" value="/WEB-INF/view/"></property>
 	<property name="suffix" value=".jsp"></property>
 </bean>
 <bean id="customer" class="com.foodDeliverySystem.bean.Customer"/> 
